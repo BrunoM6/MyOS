@@ -34,3 +34,6 @@ The bits directive tells the assembler to emit x-bit code. (in this case 16-bit)
 - db stands for "define byte(s)", and it writes given byte(s) to the assembled binary file.
 The BIOS expects the last bytes of the first sector to be AA55. One sector will have 512 bytes.
 The 'dw' command stands for "define word(s). Writes given word(s) to the assembled binary file (little endian, 2 byte value). We are using this command to create the signature that ends the section.
+
+### Running this barebones OS:
+Simply write 'make && qemu-system-i386 -fda build/main_floppy.img' on console, which will automatically compile 'main.asm' using the Makefile instructions and after use qemu to emulate the required CPU. 'qemu-system-i386' is specifically for Intel x86 (32-bit) CPUs. '-fda' is for simulating a floppy drive, useful for us to test our bootloader. 'build/main_floppy.img' specifies the path to the floppy disk image file relative to the current directory.
