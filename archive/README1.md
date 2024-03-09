@@ -1,3 +1,4 @@
+# Archive 1 - Introduction to Assembly, Makefile and Hello Word on Screen.
 ## Notes on main.asm
 We will be working with the BIOS (Basic Input/Output System), it starts the system and provides basic functions to do basic things like writing stuff to the screen using interrupts.
 We will also be using the stack, with 'sp' -> stack pointer pointing to the beginning of the OS memory and growing downwards from it, guarenteeing no overlap and loss of memory. Using 'push' and 'pop' we can get items to and from the stack.
